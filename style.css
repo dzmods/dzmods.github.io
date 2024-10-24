@@ -1,68 +1,88 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    background: #0e0e0e; /* Dark background */
+:root {
+  --primary: #EC839F;
+
+  
+  --white: #FFFFFF;
+  --greyLight-1: #E4EBF5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
 }
 
-.large-header {
-    position: relative;
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px    100% = 16px
+  overflow-y: scroll;
+  background: var(--greyLight-1);
+  
+  @media screen and (min-width: 900px) {
+        font-size: 75%; }
+}
+body {
+  display: block;
+  position: relative;
+  margin: 0 0 50px;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: var(--background);
+  width: 100%;
+  max-width: 900px;
+}
+.components {
+  width: 100%;
+}
+h1 {
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  user-select: none;
+}
+.form-group {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+textarea { 
+  padding: 0 15px;
+  display: block;
+  width: 100%;
+}
+button {
+  flex: 0 0 100%;
+  height: 40px;
+  width: 100%;
+  padding: 0;
+  margin: auto;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  user-select: none;
+}
+.logo img {
+  display: block;
+    border-radius: 9000px;
     width: 100%;
-    background: #333;
-    background-image: url('https://wallpapers.com/images/hd/dayz-starry-night-sky-wtmhzhku4arn9udm.jpg');
-    background-size: cover;
-    background-position: center center;
-    overflow: hidden;
-    z-index: 1;
-}
-
-#demo-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.main-title {
-    position: relative;
-    color: #f9f1e9;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 4.2em;
-    letter-spacing: 0.1em;
-    z-index: 2;
-    margin: 0;
-}
-
-.main-title .thin {
-    font-weight: 200;
-}
-
-.join-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #333;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    z-index: 2;
-}
-
-.join-button:hover {
-    background-color: #555;
-}
-
-@media only screen and (max-width: 768px) {
-    .main-title {
-        font-size: 3em;
-    }
+  max-width: 70px;
 }
